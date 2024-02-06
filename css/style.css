@@ -1,0 +1,11 @@
+.card-img-top {
+    width: 10%;
+}
+
+img {
+    border: 5px;
+}
+
+.card {
+    display: ruby-base-container;
+}
