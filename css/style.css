@@ -1,11 +1,262 @@
+:root{
+    /*--primary-color:#2b3035;*/
+    --background-colour:white;
+    --primary-color:rgb(201, 200, 200);
+    --header-background-colour:#2b3035;
+    --dark-color:#151515;
+    --text-primary-color:white;
+    --text-secondary-color:rgba(255, 255, 255, 0.5);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 45px;
+}
+
+/*Header*/
+.container-hero{
+    background-color: var(--header-background-colour);
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.container-logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container-logo h1 a{
+    text-decoration: none;
+    color: var(--text-primary-color);
+}
+
+.container-logo i{
+    font-size: 4rem;
+}
+
+.container-navbar{
+    display: flex;
+    align-items: center;
+}
+
+.container-user{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.container-user .fa-user{
+    font-size: 2.5rem;
+    color: var(--text-secondary-color);
+    padding-right: 1.5rem;
+    border-right: 1px solid white;
+}
+
+.container-user .fa-cart-shopping{
+    font-size: 2.5rem;
+    color: var(--text-secondary-color);
+}
+
+.content-shopping-cart{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: var(--text-primary-color);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.menu li{
+   padding: 2rem;
+   list-style: none;
+   color: var(--text-secondary-color);
+   font-weight: 600;
+}
+
+.menu a{
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover::after{
+    opacity: 1;
+}
+
+.menu a:hover{
+    color: white;
+}
+
+.search-form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 2rem;
+    background-color: white;
+    height: 3.8rem;
+    overflow: hidden;
+}
+
+.search-form input{
+    outline: none;
+    border: none;
+    width: 25rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+.search-form input::-webkit-search-cancel-button{
+    appearance: none;
+}
+
+.search-form .btn-search{
+    border: none;
+    background-color: var(--header-background-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.btn-search i{
+    color: white;
+    font-size: 1.25rem;
+}
+
+/*Carrito*/
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    right: -100%;
+    width: 360px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
+    border: 1px solid;
+    transition: 1.7s;
+    z-index: 1;
+
+}
+
+.cart.active{
+    right: 0;
+    transition: .5s;
+}
+
+.cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+}
+
+/*Main Content*/
+.main-content{
+    background-color: var(--background-colour);
+}
+
+/*products*/
+.availability{
+    display: flex;
+    justify-content: left;
+}
+
+.active{
+    color: var(--header-background-colour);
+    background-color: white;
+    padding: .3rem 1rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border-radius: .5rem;
+}
+
+.inactive{
+    cursor: not-allowed;
+    color:white;
+    background-color: grey;
+    border: 1rem;
+    border-color:black ;
+    padding: .3rem 2rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    cursor: not-allowed;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.content-card-product i{
+    font-size: 1.5rem;
+}
+
+
 .card-img-top {
     width: 10%;
 }
 
 img {
     border: 5px;
+    width: 20rem;
 }
 
 .card {
     display: ruby-base-container;
+    margin: 60px;
 }
